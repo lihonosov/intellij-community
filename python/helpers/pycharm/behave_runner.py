@@ -249,7 +249,7 @@ class _BehaveRunner(_bdd_utils.BddRunner):
                     scenarios.extend(scenario.scenarios)
                 else:
                     scenarios.append(scenario)
-            feature.scenarios = filter(self.__filter_scenarios_by_args, scenarios)
+            feature.scenarios = list(filter(self.__filter_scenarios_by_args, scenarios))
 
         return features_to_run
 
